@@ -1,0 +1,96 @@
+ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    position: relative;
+}
+.nav-demo {
+    padding-left: 5rem;
+}
+.nav-sec {
+    background-image: url('../../assets/run.png');
+    height: 40rem
+}
+.section-1{
+    display: flex;
+    padding-left: 20%;
+}
+.section-2 {
+    background-color: whitesmoke;
+    display: flex;
+    padding-top: 5%;
+    padding-bottom: 7%;
+    text-align: center;
+    text-align: justify;
+}
+.section-3 {
+    background-color: white;
+    display: flex;
+    padding-top: 5%;
+    padding-bottom: 3%;
+    text-align: center;
+    text-align: justify;
+}
+.section-4 {
+    background-color: whitesmoke;
+    display: flex;
+    padding-top: 5%;
+    padding-bottom: 3%;
+    text-align: center;
+    text-align: justify;
+}
+.section-5 {
+    background-color: white;
+    display: flex;
+    padding-top: 5%;
+    padding-bottom: 3%;
+    text-align: center;
+    text-align: justify;
+}
+.section-6 {
+    background-color: whitesmoke;
+    display: flex;
+    padding-top: 5%;
+    padding-bottom: 3%;
+    text-align: center;
+    text-align: justify;
+}
+.section-7 {
+    background-color: white;
+    display: flex;
+    padding-top: 5%;
+    padding-bottom: 3%;
+    text-align: center;
+    text-align: justify;
+}
+.section-8 {
+    // display: flex;
+    padding-top: 3%;
+    padding-bottom: 4%;
+    // padding-left: 30%;
+    text-align: center;
+    background-color: whitesmoke;
+}
+.demo-form {
+    padding-top: 3%;
+    padding-right: 30%;
+    padding-left: 30%;
+}
+.demo-btn {
+    background-color: #FD525A;
+    width: 90%;
+}
+.error-message {
+    color: red;
+}
+.section-9{
+    padding-top: 3%;
+    padding-bottom: 3%;
+    // padding-left: 30%;
+    align-items: center;
+    background-color: white;
+}
+.sec9 {
+    display: flex;
+    padding-left: 40rem;
+}
