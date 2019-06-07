@@ -1,0 +1,91 @@
+<div class="nav-sec">
+    <nav class="navbar  navbar-dark fixed-top" style="background-color: #0B2135; height: 8%">
+        <a style="padding-left: 20%" class="navbar-brand" href="/home">
+            <img src="../../../assets/aaditlife5.jpeg" width="30" height="30" alt=""> Aadit Life
+        </a>
+        <p style="color: white; font-size: 0.8rem; padding-right: 10%; padding-top: 1rem;">QUESTIONS? 1 (888) 707-2469</p>
+    </nav>
+
+</div>
+
+
+<div class="section-1" style="padding-top: 10rem;">
+  <h1 style="font-weight: bold; font-size: 3rem; color: #0B2135" >Chat with a ChowNow Expert</h1>
+  <h6 style="width: 72%; padding-left: 25%; padding-top: 2.5rem; font-size: 1rem; color: #0B2135; font-weight: 500">ChowNow builds your restaurant its very own online ordering system. Take unlimited, commission-free orders through your
+    website, Facebook, and custom mobile apps. Maximize your profits with complimentary marketing strategy, and enjoy 24/7 support.</h6>
+  <h6 style="padding-top: 2rem;">Make online ordering easy and profitable by scheduling a demo today. After all, food this good demands to be shared.</h6>
+</div>
+
+<div class="section-2">
+    <h3 align="center" style="font-weight: bolder">Ready to learn more?</h3>
+    <h6 align="center">Request a free product demo today.</h6>
+    <div class="demo-form">
+      <form (ngSubmit)="myForm.valid && onSubmit(myForm.value)" [formGroup]="myForm" >
+        <div class="form-group">
+          <input id="firstname" style="height: 3rem;" name="firstname" class="form-control" type="text" required minlength="4" formControlName="firstname" placeholder="FIRST NAME"/>
+          <div class="validation-errors">
+            <ng-container *ngFor="let validation of validation_messages.firstname" >
+            <div class="error-message" *ngIf="myForm.get('firstname').hasError(validation.type) && (myForm.get('firstname').touched)">
+                {{ validation.message }}
+            </div>
+            </ng-container>
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <input id="lastname" style="height: 3rem;" name="lastname" class="form-control" required type="text" formControlName="lastname" placeholder="LAST NAME"/>
+          <div class="validation-errors">
+            <ng-container *ngFor="let validation of validation_messages.lastname" >
+            <div class="error-message" *ngIf="myForm.get('lastname').hasError(validation.type) && (myForm.get('lastname').touched)">
+                {{ validation.message }}
+            </div>
+            </ng-container>
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <input id="email" style="height: 3rem;" name="email" class="form-control" required type="email" formControlName="email" placeholder="EMAIL ADDRESS"/>
+          <div class="validation-errors">
+            <ng-container *ngFor="let validation of validation_messages.email" >
+            <div class="error-message" *ngIf="myForm.get('email').hasError(validation.type) && (myForm.get('email').touched)">
+                {{ validation.message }}
+            </div>
+            </ng-container>
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <input id="phonenumber" style="height: 3rem;" name="phonenumber" class="form-control" required type="tel" formControlName="phonenumber" placeholder="PHONE NUMBER"/>
+          <div class="validation-errors">
+            <ng-container *ngFor="let validation of validation_messages.phonenumber" >
+            <div class="error-message" *ngIf="myForm.get('phonenumber').hasError(validation.type) && (myForm.get('phonenumber').touched)">
+                {{ validation.message }}
+            </div>
+            </ng-container>
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <input id="zipcode" style="height: 3rem;" name="zipcode" class="form-control" required type="tel" pattern="[0-9]{6}" formControlName="zipcode" placeholder="ZIP CODE"/>
+          <div class="validation-errors">
+            <ng-container *ngFor="let validation of validation_messages.zipcode" >
+            <div class="error-message" *ngIf="myForm.get('zipcode').hasError(validation.type) && (myForm.get('zipcode').touched)">
+                {{ validation.message }}
+            </div>
+            </ng-container>
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <button style="color: white; height: 3rem; font-size: 1rem;" class=" demo-btn btn" [disabled]="myForm.pristine || myForm.invalid">SCHEDULE A DEMO NOW</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
