@@ -1,28 +1,61 @@
-ul{
+ul {
     display: flex;
     flex-direction: row;
     list-style-type: none;
     position: relative;
 }
+
 .nav-demo {
-    padding-left: 5rem;
+    padding-right: 3rem;
 }
+
+h5 {
+    padding-bottom: 3%;
+}
+
+p {
+    margin-top: auto;
+}
+
 .nav-sec {
     background-image: url('../../assets/run.png');
-    height: 40rem
+    height: 40rem;
+    object-fit: scale-down;
+    height: 600px;
 }
-.section-1{
+
+.navbar-brand {
+    margin-right: 0px;
+    padding-left: 3rem;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.section-1 {
     display: flex;
-    padding-left: 20%;
+    padding-left: 0%;
+    text-align: center;
+    text-align: justify;
+
+    .column {
+        margin-left: 28%;
+    }
 }
+
 .section-2 {
     background-color: whitesmoke;
     display: flex;
-    padding-top: 5%;
-    padding-bottom: 7%;
-    text-align: center;
+    padding-top: 8%;
+    padding-bottom: 6%;
+    // text-align: center;
     text-align: justify;
+    align-content: center;
+
+    .sec2-col {
+        width: 50%;
+    }
 }
+
 .section-3 {
     background-color: white;
     display: flex;
@@ -31,6 +64,7 @@ ul{
     text-align: center;
     text-align: justify;
 }
+
 .section-4 {
     background-color: whitesmoke;
     display: flex;
@@ -39,30 +73,31 @@ ul{
     text-align: center;
     text-align: justify;
 }
+
 .section-5 {
     background-color: white;
     display: flex;
     padding-top: 5%;
     padding-bottom: 3%;
-    text-align: center;
     text-align: justify;
 }
+
 .section-6 {
     background-color: whitesmoke;
     display: flex;
     padding-top: 5%;
     padding-bottom: 3%;
-    text-align: center;
     text-align: justify;
 }
+
 .section-7 {
     background-color: white;
     display: flex;
     padding-top: 5%;
     padding-bottom: 3%;
-    text-align: center;
     text-align: justify;
 }
+
 .section-8 {
     // display: flex;
     padding-top: 3%;
@@ -71,26 +106,50 @@ ul{
     text-align: center;
     background-color: whitesmoke;
 }
+
 .demo-form {
     padding-top: 3%;
     padding-right: 30%;
     padding-left: 30%;
 }
+
 .demo-btn {
     background-color: #FD525A;
     width: 90%;
 }
+
 .error-message {
     color: red;
 }
-.section-9{
+
+.section-9 {
     padding-top: 3%;
     padding-bottom: 3%;
     // padding-left: 30%;
     align-items: center;
     background-color: white;
 }
+
 .sec9 {
     display: flex;
     padding-left: 40rem;
+}
+
+.fixed-top {
+    background: black;
+    opacity: 0.9;
+
+    @media only screen and (max-width: 1366px) {
+        height: 32%;
+    }
+}
+
+button:not(:disabled) {
+    text-decoration-color: lightblue;
+}
+
+button:hover {
+    background-color: #dce7f3;
+    color: white;
+
 }

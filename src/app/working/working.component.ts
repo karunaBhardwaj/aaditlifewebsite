@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import {EndpointService} from '../services/endpoint.service';
+import { EndpointService } from '../services/endpoint.service';
 import * as $ from 'jquery';
 
 @Component({
@@ -12,32 +12,32 @@ export class WorkingComponent implements OnInit {
 
   constructor(private sgservice: EndpointService) { }
   myForm: FormGroup;
-  Data: any ;
+  Data: any;
   validation_messages = {
     'firstname': [
-    { type: 'required', message: 'Firstname is required.'},
-    { type: 'minlength', message: 'Minimum 4 characters are required .'},
+      { type: 'required', message: 'Firstname is required.' },
+      { type: 'minlength', message: 'Minimum 4 characters are required .' },
     ],
     'lastname': [
-    { type: 'required', message: 'Lastname is required.'},
-    { type: 'minlength', message: 'Minimum 4 characters are required .'},
+      { type: 'required', message: 'Lastname is required.' },
+      { type: 'minlength', message: 'Minimum 4 characters are required .' },
     ],
     'email': [
-      { type: 'required', message: 'Email is required.'},
-      { type: 'email', message: 'Enter valid email.'},
+      { type: 'required', message: 'Email is required.' },
+      { type: 'email', message: 'Enter valid email.' },
     ],
     'phonenumber': [
-      { type: 'required', message: 'Number is required.'},
-      { type: 'minlength', message: 'Enter valid Number.'},
-      { type: 'maxlength', message: 'Enter valid Number.'}
+      { type: 'required', message: 'Number is required.' },
+      { type: 'minlength', message: 'Enter valid Number.' },
+      { type: 'maxlength', message: 'Enter valid Number.' }
     ],
     'zipcode': [
-      { type: 'required', message: 'zipcode is required.'},
-      { type: 'minlength', message: 'Enter valid zipcode.'},
-      { type: 'maxlength', message: 'Enter valid zipcode.'}
+      { type: 'required', message: 'zipcode is required.' },
+      { type: 'minlength', message: 'Enter valid zipcode.' },
+      { type: 'maxlength', message: 'Enter valid zipcode.' }
     ]
 
-    };
+  };
   ngOnInit() {
     this.myForm = new FormGroup({
       firstname: new FormControl('', [Validators.required, Validators.minLength(2)]),
@@ -45,22 +45,22 @@ export class WorkingComponent implements OnInit {
       email: new FormControl('', [Validators.required, Validators.email]),
       phonenumber: new FormControl('', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]),
       zipcode: new FormControl('', [Validators.required])
-      });
+    });
 
     const nav = document.querySelector('nav'); // Identify target
     const navBtn = document.getElementsByClassName('nav-btn')[0] as HTMLElement;
 
-    window.addEventListener('scroll', function(event) { // To listen for event
-        event.preventDefault();
+    window.addEventListener('scroll', function (event) { // To listen for event
+      event.preventDefault();
 
-        if (window.scrollY <= 80) {
-            nav.style.backgroundColor = 'transparent'; // or default color
-            navBtn.style.backgroundColor = 'transparent';
+      // if (window.scrollY <= 80) {
+      //   nav.style.backgroundColor = 'transparent'; // or default color
+      //   navBtn.style.backgroundColor = 'transparent';
 
-        } else {
-            nav.style.backgroundColor = '#0B2135';
-            navBtn.style.backgroundColor = '#FD6E75';
-        }
+      // } else {
+      //   // nav.style.backgroundColor = '#0B2135';
+      //   // navBtn.style.backgroundColor = '#FD6E75';
+      // }
     });
   }
 
@@ -113,16 +113,16 @@ export class WorkingComponent implements OnInit {
           }
         ]
       })
-  })
-  .then(
-      function success(mail) {
+    })
+      .then(
+        function success(mail) {
           console.log('Mail has been sent successfully');
-      }
-  );
+        }
+      );
   }
 
   scroll(id) {
     const el = document.getElementById(id);
-    el.scrollIntoView({behavior: 'smooth'});
+    el.scrollIntoView({ behavior: 'smooth' });
   }
 }
