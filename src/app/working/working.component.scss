@@ -21,7 +21,8 @@ p {
     background-image: url('../../assets/run.png');
     height: 40rem;
     object-fit: scale-down;
-    height: 600px;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .navbar-brand {
