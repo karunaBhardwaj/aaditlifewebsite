@@ -12,7 +12,7 @@ export class TestimonialsComponent implements OnInit {
     ngOnInit() {
 
         // nav video
-        let modal1 = document.getElementById('vid-modal1');
+        /* let modal1 = document.getElementById('vid-modal1');
         const src1 = modal1.querySelector('iframe').getAttribute('src');
         const img1 = document.getElementById('vid-btn1');
         const modalImg1: any = document.getElementById('img01');
@@ -25,7 +25,7 @@ export class TestimonialsComponent implements OnInit {
         modal1.onclick = function () {
             modal1.style.display = 'none';
             modal1.querySelector('iframe').setAttribute('src', src1);
-        };
+        }; 
 
         // testimonial video 1
         let modal2 = document.getElementById('vid-modal2');
@@ -74,10 +74,12 @@ export class TestimonialsComponent implements OnInit {
             modal4.style.display = 'none';
             modal4.querySelector('iframe').setAttribute('src', src4);
         };
+        */
 
         // navigation bar color
         const nav = document.querySelector('nav'); // Identify target
         const navBtn = document.getElementsByClassName('nav-btn')[0] as HTMLElement;
+        const logo = document.querySelector('.navbar-brand img') as HTMLImageElement;
 
         window.addEventListener('scroll', function (event) { // To listen for event
             event.preventDefault();
@@ -90,6 +92,14 @@ export class TestimonialsComponent implements OnInit {
             //     nav.style.backgroundColor = '#0B2135';
             //     navBtn.style.backgroundColor = '#FD6E75';
             // }
+
+            if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+                logo.height = 70;
+                logo.width = 70;
+              } else {
+                logo.height = 150;
+                logo.width = 150;
+              }
         });
     }
 
