@@ -57,10 +57,8 @@ ul {
     padding-bottom: 8%;
 
     &--blockquote {
-
-        padding-left: 8%;
-        padding-right: 5%;
-        padding-top: 2%;
+        position: relative;
+    margin: auto auto;
 
         p:first-child {
             width: 75%;
@@ -76,15 +74,7 @@ ul {
 }
 
 .test1 {
-   
-    width: 60%;
-    padding-top: 15%;
-    margin-right: 6%;
-    right: 0;
-    left: 0;
-    padding-right: 20%;
-    padding-left: 12%;
-    margin-top: 4%;
+    padding-right: 5%;
 }
 
 
@@ -152,9 +142,14 @@ ul {
 
 .fixed-top {
     background: black;
-    opacity: 0.9;
+    opacity: 0.8;
 
     @media only screen and (max-width: 1366px) {
         height: 32%;
     }
+}
+
+.customerImage{
+    width:400px;
+    height:400px;
 }

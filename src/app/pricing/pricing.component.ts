@@ -48,15 +48,17 @@ export class PricingComponent implements OnInit {
       });
     const nav = document.querySelector('nav'); // Identify target
     const navBtn = document.getElementsByClassName('nav-btn')[0] as HTMLElement;
+    const logo = document.querySelector('.navbar-brand img') as HTMLImageElement;
 
     window.addEventListener('scroll', function(event) { // To listen for event
         event.preventDefault();
 
-        if (window.scrollY <= 80) {
-            navBtn.style.backgroundColor = 'transparent';
-
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+          logo.height = 70;
+          logo.width = 70;
         } else {
-            navBtn.style.backgroundColor = '#FD6E75';
+          logo.height = 150;
+          logo.width = 150;
         }
     });
   }

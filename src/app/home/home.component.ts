@@ -47,7 +47,43 @@ export class HomeComponent implements OnInit {
       phonenumber: new FormControl('', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]),
       zipcode: new FormControl('', [Validators.required])
       });
-    const modal = document.getElementById('myModal');
+
+
+    const nav = document.querySelector('nav'); // Identify target
+    const navBtn = document.getElementsByClassName('nav-btn')[0] as HTMLElement;
+    const logo = document.querySelector('.navbar-brand img') as HTMLImageElement;
+
+    window.addEventListener('scroll', function(event) { // To listen for event
+        event.preventDefault();
+        /*
+        START - commented by Sumedha Garg on June 17 , not required to change the color of the banner
+        */
+        /* if (window.scrollY <= 80) {
+            nav.style.backgroundColor = 'transparent'; // or default color
+            navBtn.style.backgroundColor = 'transparent';
+
+        } else {
+            nav.style.backgroundColor = '#0B2135';
+            navBtn.style.backgroundColor = '#FD6E75';
+        } */
+        /*
+        END - commented by Sumedha Garg on June 17 , not required to change the color of the banner
+        */
+
+        if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+          logo.height = 70;
+          logo.width = 70;
+        } else {
+          logo.height = 150;
+          logo.width = 150;
+        }
+    });
+
+    /*
+    START - commented by Sumedha Garg on June 17 , because the target modal is not present in the html page home
+    */
+   
+    /* const modal = document.getElementById('myModal');
     const src = modal.querySelector('iframe').getAttribute('src');
     const img = document.getElementById('myImg');
     const modalImg: any = document.getElementById('img01');
@@ -60,24 +96,11 @@ export class HomeComponent implements OnInit {
     modal1.onclick = function() {
         modal1.style.display = 'none';
         modal1.querySelector('iframe').setAttribute('src', src);
-    };
-
-
-    const nav = document.querySelector('nav'); // Identify target
-    const navBtn = document.getElementsByClassName('nav-btn')[0] as HTMLElement;
-
-    window.addEventListener('scroll', function(event) { // To listen for event
-        event.preventDefault();
-
-        if (window.scrollY <= 80) {
-            nav.style.backgroundColor = 'transparent'; // or default color
-            navBtn.style.backgroundColor = 'transparent';
-
-        } else {
-            nav.style.backgroundColor = '#0B2135';
-            navBtn.style.backgroundColor = '#FD6E75';
-        }
-    });
+    }; */
+    
+    /*
+    END - commented by Sumedha on June 17 , because the target modal is not present in the html page home
+    */
 
   }
   onSubmit() {

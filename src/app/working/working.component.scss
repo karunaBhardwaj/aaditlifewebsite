@@ -37,7 +37,9 @@ p {
     padding-left: 0%;
     text-align: center;
     text-align: justify;
-
+    position: sticky;  
+    top:11.5%;
+    background-color:white;
     .column {
         margin-left: 28%;
     }
@@ -46,7 +48,7 @@ p {
 .section-2 {
     background-color: whitesmoke;
     display: flex;
-    padding-top: 8%;
+    padding-top:10%;
     padding-bottom: 6%;
     // text-align: center;
     text-align: justify;
@@ -60,7 +62,7 @@ p {
 .section-3 {
     background-color: white;
     display: flex;
-    padding-top: 5%;
+    padding-top: 10%;
     padding-bottom: 3%;
     text-align: center;
     text-align: justify;
@@ -69,7 +71,7 @@ p {
 .section-4 {
     background-color: whitesmoke;
     display: flex;
-    padding-top: 5%;
+    padding-top: 10%;
     padding-bottom: 3%;
     text-align: center;
     text-align: justify;
@@ -78,7 +80,7 @@ p {
 .section-5 {
     background-color: white;
     display: flex;
-    padding-top: 5%;
+    padding-top:10%;
     padding-bottom: 3%;
     text-align: justify;
 }
@@ -86,7 +88,7 @@ p {
 .section-6 {
     background-color: whitesmoke;
     display: flex;
-    padding-top: 5%;
+    padding-top: 10%;
     padding-bottom: 3%;
     text-align: justify;
 }
@@ -94,14 +96,14 @@ p {
 .section-7 {
     background-color: white;
     display: flex;
-    padding-top: 5%;
+    padding-top: 10%;
     padding-bottom: 3%;
     text-align: justify;
 }
 
 .section-8 {
     // display: flex;
-    padding-top: 3%;
+    padding-top: 10%;
     padding-bottom: 4%;
     // padding-left: 30%;
     text-align: center;
@@ -109,7 +111,7 @@ p {
 }
 
 .demo-form {
-    padding-top: 3%;
+    padding-top: 10%;
     padding-right: 30%;
     padding-left: 30%;
 }
@@ -124,7 +126,7 @@ p {
 }
 
 .section-9 {
-    padding-top: 3%;
+    padding-top: 10%;
     padding-bottom: 3%;
     // padding-left: 30%;
     align-items: center;
@@ -138,8 +140,8 @@ p {
 
 .fixed-top {
     background: black;
-    opacity: 0.9;
-
+    opacity: 0.8;
+    
     @media only screen and (max-width: 1366px) {
         height: 32%;
     }

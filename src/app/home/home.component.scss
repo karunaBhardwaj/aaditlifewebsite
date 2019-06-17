@@ -13,7 +13,7 @@ ul {
 .nav-sec {
     background-image: url('../../assets/img1.jpg');
     object-fit: scale-down;
-    height: 600px;
+    height: -webkit-fill-available;
 }
 
 .navbar-brand {
@@ -27,7 +27,6 @@ ul {
     display: flex;
     padding-top: 3%;
     padding-left: 0%;
-    text-align: center;
     text-align: justify;
 }
 
@@ -35,7 +34,6 @@ ul {
     display: flex;
     padding-top: 8%;
     padding-bottom: 6%;
-    padding-left: 30%;
     // text-align: center;
     text-align: justify;
     align-content: center;
@@ -113,8 +111,7 @@ ul {
     padding-top: 3%;
     padding-left: 20%;
     padding-right: 20%;
-    // padding-bottom: 4%;
-    text-align: center;
+    padding-bottom: 4%;
     text-align: justify;
     align-content: center;
     background-color: white;
@@ -178,7 +175,7 @@ ul {
 
 .fixed-top {
     background: black;
-    opacity: 0.9;
+    opacity: 0.8;
 
     @media only screen and (max-width: 1366px) {
         height: 32%;
