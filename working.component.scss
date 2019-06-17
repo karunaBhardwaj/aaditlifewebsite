@@ -1,0 +1,158 @@
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    position: relative;
+}
+
+.nav-demo {
+    padding-right: 3rem;
+}
+
+h5 {
+    padding-bottom: 3%;
+}
+
+p {
+    margin-top: auto;
+}
+
+.nav-sec {
+    background-image: url('../../assets/run.png');
+    height: 40rem;
+    object-fit: scale-down;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar-brand {
+    margin-right: 0px;
+    padding-left: 3rem;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.section-1 {
+    display: flex;
+    padding-left: 0%;
+    text-align: center;
+    text-align: justify;
+    position: sticky;  
+    top:11.5%;
+    background-color:white;
+    .column {
+        margin-left: 28%;
+    }
+}
+
+.section-2 {
+    background-color: whitesmoke;
+    display: flex;
+    padding-top:10%;
+    padding-bottom: 6%;
+    // text-align: center;
+    text-align: justify;
+    align-content: center;
+
+    .sec2-col {
+        width: 50%;
+    }
+}
+
+.section-3 {
+    background-color: white;
+    display: flex;
+    padding-top: 10%;
+    padding-bottom: 3%;
+    text-align: center;
+    text-align: justify;
+}
+
+.section-4 {
+    background-color: whitesmoke;
+    display: flex;
+    padding-top: 10%;
+    padding-bottom: 3%;
+    text-align: center;
+    text-align: justify;
+}
+
+.section-5 {
+    background-color: white;
+    display: flex;
+    padding-top:10%;
+    padding-bottom: 3%;
+    text-align: justify;
+}
+
+.section-6 {
+    background-color: whitesmoke;
+    display: flex;
+    padding-top: 10%;
+    padding-bottom: 3%;
+    text-align: justify;
+}
+
+.section-7 {
+    background-color: white;
+    display: flex;
+    padding-top: 10%;
+    padding-bottom: 3%;
+    text-align: justify;
+}
+
+.section-8 {
+    // display: flex;
+    padding-top: 10%;
+    padding-bottom: 4%;
+    // padding-left: 30%;
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+.demo-form {
+    padding-top: 10%;
+    padding-right: 30%;
+    padding-left: 30%;
+}
+
+.demo-btn {
+    background-color: #FD525A;
+    width: 90%;
+}
+
+.error-message {
+    color: red;
+}
+
+.section-9 {
+    padding-top: 10%;
+    padding-bottom: 3%;
+    // padding-left: 30%;
+    align-items: center;
+    background-color: white;
+}
+
+.sec9 {
+    display: flex;
+    padding-left: 40rem;
+}
+
+.fixed-top {
+    background: black;
+    opacity: 0.8;
+    
+    @media only screen and (max-width: 1366px) {
+        height: 32%;
+    }
+}
+
+button:not(:disabled) {
+    text-decoration-color: lightblue;
+}
+
+button:hover {
+    background-color: #dce7f3;
+    color: white;
+
+}

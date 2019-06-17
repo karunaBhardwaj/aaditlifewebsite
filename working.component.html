@@ -1,0 +1,198 @@
+<div class="nav-sec">
+  <nav class="navbar  navbar-dark fixed-top">
+    <a class="navbar-brand" href="/home">
+      <img src="../../../assets/MediumSquareLogo.png" width="150" height="150" alt="">
+    </a>
+    <ul style="padding-left:0 ">
+      <li class="nav-item">
+        <a style="color: white; font-weight: 500" class="btn btn-link" href="/working">How it Works</a>
+      </li>
+      <li class="nav-item">
+        <a style="color: white; font-weight: 500" class="btn btn-link" href="/testimonials">Testimonials</a>
+      </li>
+      <li class="nav-item">
+        <a style="color: white; font-weight: 500" class="btn btn-link" href="/pricing">Pricing</a>
+      </li>
+    </ul>
+    <div class="nav-demo">
+      <a href="/demo" style="color:white; border-color: white; font-weight: 500; font-size: 0.9em;"
+        class="btn nav-btn btn-lg">CONTACT US</a>
+    </div>
+
+  </nav>
+
+  <div style="padding-top:20%;">
+    <h1 style="color: #FFFFFF; text-align: center; font-size:4em;">How It Works</h1>
+  </div>
+</div>
+
+
+<div class="section-1">
+  <div class="column">
+    <button style="color:grey; font-weight: 500; font-size: 0.9em;" (click)="scroll('section-2')"
+      class="btn btn-lg">PHYSICAL ACTIVITY</button>
+    <button style="color:grey; font-weight: 500; font-size: 0.9em;" (click)="scroll('section-3')"
+      class="btn btn-lg">DIET
+      & NUTRITION</button>
+    <button style="color:grey; font-weight: 500; font-size: 0.9em;" (click)="scroll('section-4')"
+      class="btn btn-lg">STRESS MANAGEMENT</button>
+    <button style="color:grey; font-weight: 500; font-size: 0.9em;" (click)="scroll('section-5')"
+      class="btn btn-lg">REST
+      & RECOVERY</button>
+  </div>
+</div>
+
+<div class="section-2">
+  <div class="sec2-col">
+    <img style="display: block;
+    margin-left: 35%;
+  width: 1000px;" src="../../assets/HowWorks0.png">
+  </div>
+</div>
+
+<div class="section-2" id="section-2">
+  <div class="column" style="padding-left: 17%; padding-right: 10%;">
+    <h5 style=" width: 14em; font-size: 1.7em; font-weight: bold; ">Physical Activity</h5>
+    <p style="text-align: justify; width: 24em;">Comprehensive wellness index measured</p>
+    <p style="text-align: justify; width: 24em;">Cardiovascular profiling, fat %, muscle %, body age, visceral fat%,
+      BMI, RM. Define targets based on ideal state for current age, gender
+    </p>
+    <p style="text-align: justify; width: 24em;">Customized workout plans generated based on heuristic algorithm.
+      Each worout is designed to focus on strenghening skeletal muscles, cardiovascular endurance, lactate
+      threshold,neuromuscular power
+    </p>
+  </div>
+  <div class="column">
+    <img src="../../assets/Physical.png" width="500" height="450">
+  </div>
+</div>
+
+<div class="section-3" id="section-3">
+  <div class="column" style="padding-left: 17%; padding-right: 10%;">
+    <h5 style=" width: 14em; font-size: 1.7em; font-weight: bold; ">Diet & Nutrition</h5>
+    <p style="text-align: justify; width: 24em;">Guided approach to incorporte small changes to tranform regular diet
+      to
+      healthier options.</p>
+    <p style="text-align: justify; width: 24em;">Eat mindfully, being more aware of incoming nutrients and what is
+      appropriate for a healthy lifestyle </p>
+
+  </div>
+  <div class="column">
+    <img src="../../assets/Diet.png" width="500" height="394">
+  </div>
+</div>
+
+<div class="section-4" id="section-4">
+  <div class="column" style="padding-left: 17%; padding-right: 10%;">
+    <h5 style=" width: 14em; font-size: 1.7em; font-weight: bold; ">Stress Management</h5>
+    <p style="text-align: justify; width: 24em;">What is Stress? Is All Stress Bad ? Types of Stress ? What are the
+      effects of chronic stress on our Body and Mind?</p>
+    <p style="text-align: justify; width: 24em;">All these and more questions answered through stress management
+      sessions.</p>
+
+  </div>
+  <div class="column">
+    <img src="../../assets/Stress.png" width="500" height="300">
+  </div>
+</div>
+
+<div class="section-5" id="section-5">
+  <div class="column" style="padding-left: 17%; padding-right: 10%;">
+    <h5 style=" width: 14em; font-size: 1.7em; font-weight: bold; ">Rest & Recovery</h5>
+    <p style="text-align: justify; width: 24em;">Rest and recovery is an important aspect of an exercise program. What
+      is the body time to repair and strengthen itself in between workouts?</p>
+    <p style="text-align: justify; width: 24em;">Learn about short term recovery, long term recovery and benefits of
+      good sleeping habits</p>
+
+  </div>
+  <div class="column">
+    <img src="../../assets/sleep.png" width="500" height="400">
+  </div>
+</div>
+
+
+
+
+<div class="section-8">
+  <h3 align="center" style="font-weight: bolder">Ready to learn more?</h3>
+  <h6 align="center">Request for more details by filling up below form</h6>
+  <div class="demo-form">
+    <form (ngSubmit)="myForm.valid && onSubmit(myForm.value)" [formGroup]="myForm">
+      <div class="form-group">
+        <input id="firstname" style="height: 3rem;" name="firstname" class="form-control" type="text" required
+          minlength="4" formControlName="firstname" placeholder="FIRST NAME" />
+        <div class="validation-errors">
+          <ng-container *ngFor="let validation of validation_messages.firstname">
+            <div class="error-message"
+              *ngIf="myForm.get('firstname').hasError(validation.type) && (myForm.get('firstname').touched)">
+              {{ validation.message }}
+            </div>
+          </ng-container>
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <input id="lastname" style="height: 3rem;" name="lastname" class="form-control" required type="text"
+          formControlName="lastname" placeholder="LAST NAME" />
+        <div class="validation-errors">
+          <ng-container *ngFor="let validation of validation_messages.lastname">
+            <div class="error-message"
+              *ngIf="myForm.get('lastname').hasError(validation.type) && (myForm.get('lastname').touched)">
+              {{ validation.message }}
+            </div>
+          </ng-container>
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <input id="email" style="height: 3rem;" name="email" class="form-control" required type="email"
+          formControlName="email" placeholder="EMAIL ADDRESS" />
+        <div class="validation-errors">
+          <ng-container *ngFor="let validation of validation_messages.email">
+            <div class="error-message"
+              *ngIf="myForm.get('email').hasError(validation.type) && (myForm.get('email').touched)">
+              {{ validation.message }}
+            </div>
+          </ng-container>
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <input id="phonenumber" style="height: 3rem;" name="phonenumber" class="form-control" required type="tel"
+          formControlName="phonenumber" placeholder="PHONE NUMBER" />
+        <div class="validation-errors">
+          <ng-container *ngFor="let validation of validation_messages.phonenumber">
+            <div class="error-message"
+              *ngIf="myForm.get('phonenumber').hasError(validation.type) && (myForm.get('phonenumber').touched)">
+              {{ validation.message }}
+            </div>
+          </ng-container>
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <input id="zipcode" style="height: 3rem;" name="zipcode" class="form-control" required type="tel"
+          pattern="[0-9]{6}" formControlName="zipcode" placeholder="ZIP CODE" />
+        <div class="validation-errors">
+          <ng-container *ngFor="let validation of validation_messages.zipcode">
+            <div class="error-message"
+              *ngIf="myForm.get('zipcode').hasError(validation.type) && (myForm.get('zipcode').touched)">
+              {{ validation.message }}
+            </div>
+          </ng-container>
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <button style="color: white; height: 3rem; font-size: 1rem;" class=" demo-btn btn"
+          [disabled]="myForm.pristine || myForm.invalid">SCHEDULE A DEMO NOW</button>
+      </div>
+    </form>
+  </div>
+
+</div>
