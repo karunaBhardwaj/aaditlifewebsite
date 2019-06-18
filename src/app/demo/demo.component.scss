@@ -14,10 +14,36 @@
     padding-right: 30%;
     padding-left: 30%;
     }
-    .demo-btn {
-        background-color: #FD525A;
-        width: 90%;
+.demo-btn {
+    background-color: #FD525A;
+    width: 90%;
     }
-    .error-message {
+    
+.error-message {
         color: red;
     }
+
+ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    position: relative;
+    }
+    
+.nav-demo {
+        padding-left: 5rem;
+    }
+   
+nav{
+        background-color: #0B2135;
+    }
+
+.fixed-top {
+        background: #0B2135;
+        opacity: 0.8;
+    
+        @media only screen and (max-width: 1366px) {
+            height: 32%;
+        }
+    }
+    

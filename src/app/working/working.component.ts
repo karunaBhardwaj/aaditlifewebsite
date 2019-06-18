@@ -39,6 +39,12 @@ export class WorkingComponent implements OnInit {
 
   };
   ngOnInit() {
+    /* document.getElementsByClassName("section-2")[0].addEventListener("load", function(){
+       setTimeout(function() {
+         this.fadeInSequentially($("li").first());
+       
+          }, 80);
+     }); */
     this.myForm = new FormGroup({
       firstname: new FormControl('', [Validators.required, Validators.minLength(2)]),
       lastname: new FormControl('', [Validators.required, Validators.minLength(2)]),
@@ -69,6 +75,8 @@ export class WorkingComponent implements OnInit {
       //   // navBtn.style.backgroundColor = '#FD6E75';
       // }
     });
+
+    
   }
 
   onSubmit() {
@@ -132,4 +140,15 @@ export class WorkingComponent implements OnInit {
     const el = document.getElementById(id);
     el.scrollIntoView({ behavior: 'smooth' });
   }
+
+   fadeInSequentially (element) {
+    if (element == null || element.length === 0) {
+      return;
+    }
+    $(element).fadeIn(400, function () {
+      this.fadeInSequentially($(element).next());
+    });
+  }
+  
+    
 }

@@ -49,7 +49,7 @@ p {
     background-color: whitesmoke;
     display: flex;
     padding-top:10%;
-    padding-bottom: 6%;
+    /* padding-bottom: 6%; */
     // text-align: center;
     text-align: justify;
     align-content: center;
@@ -62,7 +62,7 @@ p {
 .section-3 {
     background-color: white;
     display: flex;
-    padding-top: 10%;
+    padding-top: 7%;
     padding-bottom: 3%;
     text-align: center;
     text-align: justify;
@@ -139,7 +139,7 @@ p {
 }
 
 .fixed-top {
-    background: black;
+    background: #0B2135;
     opacity: 0.8;
     
     @media only screen and (max-width: 1366px) {
@@ -155,4 +155,11 @@ button:hover {
     background-color: #dce7f3;
     color: white;
 
+}
+
+.highlights{
+    position: relative;
+    margin: auto auto;
+    font-size: 1.1em;
+    font-weight: 500;
 }
