@@ -3,10 +3,22 @@ ul {
     flex-direction: row;
     list-style-type: none;
     position: relative;
+    @media only screen and (max-width: 575px) {
+      display: block;
+    }
+}
+li{
+  @media only screen and (max-width: 575px) {
+    display: block;
+  }
 }
 
 .nav-demo {
     padding-left: 5rem;
+    @media only screen and (max-width: 575px) {
+      padding-left: 30%;
+      padding-bottom: 20px;
+    }
 }
 
 .navbar-brand {
@@ -14,6 +26,9 @@ ul {
     padding-left: 3rem;
     padding-top: 0;
     padding-bottom: 0;
+    @media only screen and (max-width: 575px) {
+      padding-left: 0;
+    }
 }
 
 .nav-sec {
@@ -63,18 +78,26 @@ ul {
         p:first-child {
             width: 75%;
             display: inline-block;
+
         }
 
         section {
             width: 79%;
             display: inline-block;
             text-align: left;
+            @media only screen and (max-width: 575px) {
+              width: 100%;
+              padding: 0 10px
+            }
         }
     }
 }
 
 .test1 {
     padding-right: 5%;
+    @media only screen and (max-width: 575px) {
+      margin-top: 20px;
+    }
 }
 
 
@@ -140,13 +163,13 @@ ul {
     padding-left: 40rem;
 }
 
-.fixed-top {
-    background: #0B2135;
-    opacity: 0.8;
+.top-fixed {
+  background: #0B2135;
+  opacity: 0.8;
 
-    @media only screen and (max-width: 1366px) {
-        height: 32%;
-    }
+  @media only screen and (max-width: 1366px) {
+      height: 32%;
+  }
 }
 
 .customerImage{
@@ -160,13 +183,13 @@ ul {
 
 .container {
     position: relative;
-   
+
   }
-  
+
   .image {
     display: block;
   }
-  
+
   .overlay {
     position: absolute;
     top: 0;
@@ -178,12 +201,14 @@ ul {
     opacity: 0;
     transition: .5s ease;
     background-color: gray;
+
+
   }
-  
+
   .container:hover .overlay {
     opacity: 0.5;
   }
-  
+
   .text {
     color: black;
     font-size: 20px;
