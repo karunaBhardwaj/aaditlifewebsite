@@ -42,7 +42,7 @@ export class WorkingComponent implements OnInit {
     /* document.getElementsByClassName("section-2")[0].addEventListener("load", function(){
        setTimeout(function() {
          this.fadeInSequentially($("li").first());
-       
+
           }, 80);
      }); */
     this.myForm = new FormGroup({
@@ -56,16 +56,20 @@ export class WorkingComponent implements OnInit {
     const nav = document.querySelector('nav'); // Identify target
     const logo = document.querySelector('.navbar-brand img') as HTMLImageElement;
     const navBtn = document.getElementsByClassName('nav-btn')[0] as HTMLElement;
+    const subMenu = document.getElementsByClassName('section-1')[0] as HTMLElement;
 
     window.addEventListener('scroll', function (event) { // To listen for event
       event.preventDefault();
         if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
-          logo.height = 70;
-          logo.width = 70;
+          logo.height = 150;
+          logo.width = 150;
+         //subMenu.style.top = '100px';
         } else {
           logo.height = 150;
           logo.width = 150;
         }
+
+
       // if (window.scrollY <= 80) {
       //   nav.style.backgroundColor = 'transparent'; // or default color
       //   navBtn.style.backgroundColor = 'transparent';
@@ -76,7 +80,7 @@ export class WorkingComponent implements OnInit {
       // }
     });
 
-    
+
   }
 
   onSubmit() {
@@ -149,6 +153,6 @@ export class WorkingComponent implements OnInit {
       this.fadeInSequentially($(element).next());
     });
   }
-  
-    
+
+
 }
