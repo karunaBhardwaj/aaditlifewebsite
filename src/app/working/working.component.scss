@@ -3,18 +3,44 @@ ul {
     flex-direction: row;
     list-style-type: none;
     position: relative;
+    @media only screen and (max-width: 575px) {
+      display: block;
+    }
+}
+
+li{
+  @media only screen and (max-width: 575px) {
+    display: block;
+  }
 }
 
 .nav-demo {
     padding-right: 3rem;
+    @media only screen and (max-width: 575px) {
+      padding-left: 30%;
+      padding-bottom: 20px;
+    }
 }
 
 h5 {
     padding-bottom: 3%;
+    @media only screen and (max-width: 575px) {
+      width: auto;
+      margin-top: 20px;
+    }
 }
 
 p {
     margin-top: auto;
+
+}
+
+.content-padding{
+
+  @media only screen and (max-width: 575px) {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 }
 
 .nav-sec {
@@ -23,6 +49,9 @@ p {
     object-fit: scale-down;
     background-size: cover;
     background-repeat: no-repeat;
+    @media only screen and (max-width: 575px) {
+      height: auto;
+    }
 }
 
 .navbar-brand {
@@ -30,6 +59,9 @@ p {
     padding-left: 3rem;
     padding-top: 0;
     padding-bottom: 0;
+    @media only screen and (max-width: 575px) {
+      padding-left: 5px;
+    }
 }
 
 .section-1 {
@@ -37,12 +69,36 @@ p {
     padding-left: 0%;
     text-align: center;
     text-align: justify;
-    position: sticky;  
+
     top:11.5%;
+    z-index: 9999;
     background-color:white;
     .column {
-        margin-left: 28%;
+        @media only screen and (max-width: 575px) {
+          margin-left: 5%;
+        }
+        .btn{
+          @media only screen and (max-width: 575px) {
+            padding: 0;
+          }
+        }
+        .img-fluid{
+          padding-left: 10%;
+        }
     }
+    @media only screen and (max-width: 575px) {
+      display: block;
+      position: relative;
+
+    }
+}
+.sec2-col .img-fluid{
+  margin-left: 35%;
+  width: 800px;
+  @media only screen and (max-width: 575px) {
+    margin-left: 0;
+    width: 80%;
+  }
 }
 
 .section-2 {
@@ -56,6 +112,9 @@ p {
 
     .sec2-col {
         width: 50%;
+        @media only screen and (max-width: 575px) {
+          width: 100%;
+        }
     }
 }
 
@@ -71,7 +130,7 @@ p {
 .section-4 {
     background-color: whitesmoke;
     display: flex;
-    padding-top: 10%;
+    padding-top: 3%;
     padding-bottom: 3%;
     text-align: center;
     text-align: justify;
@@ -80,7 +139,7 @@ p {
 .section-5 {
     background-color: white;
     display: flex;
-    padding-top:10%;
+    padding-top:3%;
     padding-bottom: 3%;
     text-align: justify;
 }
@@ -88,7 +147,7 @@ p {
 .section-6 {
     background-color: whitesmoke;
     display: flex;
-    padding-top: 10%;
+    padding-top: 3%;
     padding-bottom: 3%;
     text-align: justify;
 }
@@ -138,10 +197,10 @@ p {
     padding-left: 40rem;
 }
 
-.fixed-top {
+.top-fixed {
     background: #0B2135;
     opacity: 0.8;
-    
+
     @media only screen and (max-width: 1366px) {
         height: 32%;
     }
@@ -162,4 +221,9 @@ button:hover {
     margin: auto auto;
     font-size: 1.1em;
     font-weight: 500;
+    padding: 0 50px;
+    @media only screen and (max-width: 575px) {
+      padding: 0 15px;
+    }
 }
+
