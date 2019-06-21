@@ -70,13 +70,13 @@ export class HomeComponent implements OnInit {
         END - commented by Sumedha Garg on June 17 , not required to change the color of the banner
         */
 
-        if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+        /* if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
           logo.height = 70;
           logo.width = 70;
         } else {
           logo.height = 150;
           logo.width = 150;
-        }
+        } */
     });
 
     /*

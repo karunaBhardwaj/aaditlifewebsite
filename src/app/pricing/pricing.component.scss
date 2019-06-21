@@ -1,9 +1,5 @@
-ul{
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    position: relative;
-}
+
+
 .nav-demo {
     padding-left: 5rem;
 }
@@ -11,27 +7,30 @@ nav{
     background-color: #0B2135;
 }
 .section-1{
-    padding-top: 10rem;
+    padding-top: 5rem;
     text-align: center;
     padding-bottom: 5%;
 }
 .section-2{
-    display: flex;
     // padding-top: 8%;
     // padding-bottom: 6%;
     text-align: center;
     text-align: justify;
     align-content: center;
     position: relative;
+    padding:10%;
+    padding-bottom: 5%;
+    padding-top:0%;
 }
 .plans {
     align-content: center;
     position: relative;
     margin:auto auto;
-    // padding-left: 5%;
+    font-size:15px;
+    padding-left: 5%;
 }
 sup {
-    vertical-align: super;
+    vertical-align: -webkit-baseline-middle;
     font-size: 1.3rem;
     font-weight: 300;
 }
@@ -149,8 +148,34 @@ sub {
 .fixed-top {
     background: #0B2135;
     opacity: 0.8;
-    
     @media only screen and (max-width: 1366px) {
-        height: 32%;
+        height: 12%;
+    }
+}
+
+.seprator_class {
+    position: relative;
+    top:205px;
+}
+.sep {
+    position: absolute; left:50%; top:0; bottom:0; width: 1px; background:#ccc; display:table; height:100%;
+    @media screen and (max-width: 768px) {
+        position: absolute; left:0; top:50%; bottom:auto; right:0; width:100%; background:#ccc; display:block; height: 1px; text-align:center;
+    }
+}
+.sep-text { display:flex; vertical-align:middle; background: #fff; padding: 5px;
+    @media screen and (max-width: 768px) {
+    display:inline-block;
+}
+}
+
+.nav-links-styles{
+    margin-left:200px;
+    position:absolute;
+    top:30%;
+    @media screen and (max-width: 768px) {
+        margin-left:0px;
+        position:unset;
+        top:0%
     }
 }

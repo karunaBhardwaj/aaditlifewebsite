@@ -50,7 +50,7 @@ export class PricingComponent implements OnInit {
     const navBtn = document.getElementsByClassName('nav-btn')[0] as HTMLElement;
     const logo = document.querySelector('.navbar-brand img') as HTMLImageElement;
 
-    window.addEventListener('scroll', function(event) { // To listen for event
+    /* window.addEventListener('scroll', function(event) { // To listen for event
         event.preventDefault();
 
         if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
@@ -60,7 +60,7 @@ export class PricingComponent implements OnInit {
           logo.height = 150;
           logo.width = 150;
         }
-    });
+    }); */
   }
 
   onSubmit() {
