@@ -173,12 +173,8 @@
 }
 
 .nav-links-styles{
-    margin-left:200px;
-    position:absolute;
-    top:30%;
+    margin-left:350px;
     @media screen and (max-width: 768px) {
         margin-left:0px;
-        position:unset;
-        top:0%
     }
 }

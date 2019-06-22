@@ -81,7 +81,7 @@ export class TestimonialsComponent implements OnInit {
         const navBtn = document.getElementsByClassName('nav-btn')[0] as HTMLElement;
         const logo = document.querySelector('.navbar-brand img') as HTMLImageElement;
 
-        window.addEventListener('scroll', function (event) { // To listen for event
+        /* window.addEventListener('scroll', function (event) { // To listen for event
             event.preventDefault();
 
             // if (window.scrollY <= 80) {
@@ -100,7 +100,7 @@ export class TestimonialsComponent implements OnInit {
                 logo.height = 150;
                 logo.width = 150;
               }
-        });
+        }); */
     }
 
 }

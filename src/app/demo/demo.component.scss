@@ -23,12 +23,7 @@
         color: red;
     }
 
-ul{
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    position: relative;
-    }
+
     
 .nav-demo {
         padding-left: 5rem;
@@ -47,3 +42,9 @@ nav{
         }
     }
     
+    .nav-links-styles{
+        margin-left:350px;
+        @media screen and (max-width: 768px) {
+            margin-left:0px;
+        }
+    }

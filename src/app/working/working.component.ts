@@ -58,7 +58,7 @@ export class WorkingComponent implements OnInit {
     const navBtn = document.getElementsByClassName('nav-btn')[0] as HTMLElement;
     const subMenu = document.getElementsByClassName('section-1')[0] as HTMLElement;
 
-    window.addEventListener('scroll', function (event) { // To listen for event
+    /* window.addEventListener('scroll', function (event) { // To listen for event
       event.preventDefault();
         if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
           logo.height = 150;
@@ -78,7 +78,7 @@ export class WorkingComponent implements OnInit {
       //   // nav.style.backgroundColor = '#0B2135';
       //   // navBtn.style.backgroundColor = '#FD6E75';
       // }
-    });
+    }); */
 
 
   }

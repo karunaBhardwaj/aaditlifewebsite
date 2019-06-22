@@ -31,10 +31,9 @@ export class DemoComponent implements OnInit {
       { type: 'minlength', message: 'Enter valid Number.'},
       { type: 'maxlength', message: 'Enter valid Number.'}
     ],
-    'zipcode': [
-      { type: 'required', message: 'zipcode is required.'},
-      { type: 'minlength', message: 'Enter valid zipcode.'},
-      { type: 'maxlength', message: 'Enter valid zipcode.'}
+    'message': [
+      { type: 'required', message: 'message is required.'},
+      { type: 'minlength', message: 'Minimum 4 characters are required .'}
     ]
 
     };
@@ -44,7 +43,7 @@ export class DemoComponent implements OnInit {
       lastname: new FormControl('', [Validators.required, Validators.minLength(2)]),
       email: new FormControl('', [Validators.required, Validators.email]),
       phonenumber: new FormControl('', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]),
-      zipcode: new FormControl('', [Validators.required])
+      message: new FormControl('', [Validators.required])
       });
   }
   onSubmit() {
