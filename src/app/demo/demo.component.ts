@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import {EndpointService} from '../services/endpoint.service';
 import * as $ from 'jquery';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-demo',
@@ -10,7 +13,7 @@ import * as $ from 'jquery';
 })
 export class DemoComponent implements OnInit {
 
-  constructor(private sgservice: EndpointService) { }
+  constructor(private router: Router, private sgservice: EndpointService, public dialog: MatDialog) { }
   myForm: FormGroup;
   Data: any;
   validation_messages = {
@@ -47,53 +50,32 @@ export class DemoComponent implements OnInit {
       });
   }
   onSubmit() {
-    alert(JSON.stringify(this.myForm.value));
     this.Data = this.myForm.value;
-    console.log(this.Data);
     this.Mail();
     }
   Mail() {
-    $.ajax(this.sgservice.sendgridApi, {
+    this.openDialog();
+    $.ajax('http://127.0.0.1:3000/sendMail', {
       async: true,
       crossDomain: true,
       method: 'POST',
       headers: {
-        'authorization': `Bearer ${this.sgservice.sgApiKey}`,
-        'content-type': 'application/json'
+        'Content-Type': 'application/json'
       },
       processData: false,
       data: JSON.stringify({
-        'personalizations': [
-          {
-            'to': [
-              {
-                'email': 'abhilash.vadlamudi@wissen.com',
-                'name': `Aadit Life`
-              }
-            ],
-            'subject': 'Demo Request !!'
-          }
-        ],
-        'from': {
-          'email': `${this.Data.email}`,
-          'name': `${this.Data.firstname}`
-        },
-        'reply_to': {
-          'email': 'aaditlife.test@gmail.com',
-          'name': 'Aadit Life'
-        },
-        'content': [
-          {
-            'type': 'text/html',
-            'value': `Date : ${new Date().toLocaleDateString()}<br/>
-                      First Name: ${this.Data.firstname}<br/>
-                      Last Name: ${this.Data.lastname}<br/>
-                      Email:  ${this.Data.email}<br/>
-                      Mobile: ${this.Data.phonenumber}<br/>
-                      Zipcode: ${this.Data.zipcode}`
-          }
-        ]
-      })
+          'from': 'aaditlifesupport@aaditlife.com',
+          'to': 'aadit.life@gmail.com',
+          'cc': this.Data.email,
+          'subject': this.Data.firstname[0].toUpperCase() + this.Data.firstname.slice(1) + ' Is Requesting More Information',
+          'html': `Date : ${new Date().toLocaleDateString()}<br/>
+          First Name: ${this.Data.firstname}<br/>
+          Last Name: ${this.Data.lastname}<br/>
+          Email:  ${this.Data.email}<br/>
+          Mobile: ${this.Data.phonenumber}<br/>
+          Message: ${this.Data.message}
+          `
+        })
   })
   .then(
       function success(mail) {
@@ -101,5 +83,32 @@ export class DemoComponent implements OnInit {
       }
   );
   }
-}
 
+  openDialog(): void {
+    const dialogRef = this.dialog.open(DialogOverviewDemoComponent, {
+      width: '300px',
+      data: {name: 'animal', animal: 'cow'}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      this.router.navigate(['/']);
+    });
+  }
+
+}
+@Component({
+  selector: 'app-dialog-overview-dialog',
+  templateUrl: 'dialog-box.html',
+  styleUrls: ['./demo.component.scss']
+})
+export class DialogOverviewDemoComponent {
+
+  constructor(
+    public dialogRef: MatDialogRef<DialogOverviewDemoComponent>,
+    @Inject(MAT_DIALOG_DATA) private data: any) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
+}

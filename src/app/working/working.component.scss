@@ -44,11 +44,12 @@ p {
 }
 
 .nav-sec {
-    background-image: url('../../assets/run.png');
+    background-image: url('../../assets/run.jpg');
     height: 40rem;
     object-fit: scale-down;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: right;
     @media only screen and (max-width: 575px) {
       height: auto;
     }
