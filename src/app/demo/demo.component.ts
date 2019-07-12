@@ -54,29 +54,11 @@ export class DemoComponent implements OnInit {
     this.Mail();
     }
   Mail() {
+    const htmlContent = `Date : ${new Date().toLocaleDateString()}<br/>First Name: ${this.Data.firstname}<br/>Last Name: ${this.Data.lastname}<br/>Email:  ${this.Data.email}<br/>Mobile: ${this.Data.phonenumber}<br/>Message: ${this.Data.message}`;
+    const subject = this.Data.firstname[0].toUpperCase() + this.Data.firstname.slice(1) + ' Is Requesting More Information';
+    const url = `http://aaditlife.com/testscript/testmail.php?from=aaditlifesupport@aaditlife.com&to=aadit.life@gmail.com&subject=${subject}&html=${htmlContent}&firstname=${this.Data.firstname}&lastname=${this.Data.lastname}`;
     this.openDialog();
-    $.ajax('http://127.0.0.1:3000/sendMail', {
-      async: true,
-      crossDomain: true,
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      processData: false,
-      data: JSON.stringify({
-          'from': 'aaditlifesupport@aaditlife.com',
-          'to': 'aadit.life@gmail.com',
-          'cc': this.Data.email,
-          'subject': this.Data.firstname[0].toUpperCase() + this.Data.firstname.slice(1) + ' Is Requesting More Information',
-          'html': `Date : ${new Date().toLocaleDateString()}<br/>
-          First Name: ${this.Data.firstname}<br/>
-          Last Name: ${this.Data.lastname}<br/>
-          Email:  ${this.Data.email}<br/>
-          Mobile: ${this.Data.phonenumber}<br/>
-          Message: ${this.Data.message}
-          `
-        })
-  })
+  fetch(url)
   .then(
       function success(mail) {
           console.log('Mail has been sent successfully');
